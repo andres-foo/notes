@@ -1,21 +1,21 @@
 # VISUAL STUDIO CODE SHORTCUTS
 
-## Command pallete
+## COMMAND PALLETE
 
 To call forth the command pallete press `CTRL + SHIFT + P`
 
-### Common commands:
+### Common commands
 * Interactive editor playground
 
-## Multi cursor editing
+## MULTI-CURSOS EDITING
 
-* **CTRL + ALT + UP/DOWN** : Create a new cursor above or below
-* **CTRL + SHIFT**
+* **CTRL + ALT + UP/DOWN**: Create a new cursor above or below in the same column
+* **ALT + MOUSE1**: Create new cursor where the click is made
 
-## Misc
-* ALT + SHIFT + DOWN: duplicate line down 
+## MISC
+* **ALT + SHIFT + DOWN**: duplicate line
+* **ALT + UP/DOWN**: move the line up/down swapping with other lines 
 
-
-## Running file
+## RUNNING A FILE
 * **F5** : start debugging
 * **CTRL + F5** : run without debugging
