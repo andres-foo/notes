@@ -10,30 +10,31 @@ It will show commands like **compile**, **create**, **pub**, **run** and others.
 ## CREATING A NEW PACKAGE
 To see the available options type:
 ```
-dart create -h
+dart help create
 ```
 You can create a package based in different templates, for example typing:
 ```
-dart create -t console-full my_package
+dart create my_package
 ```
 
-Will create the following sctructure:
+Will create a package based on the default **console** template with the following structure:
 ```
 my_package
- |- bin
+ |- /bin
     |- my_package.dart
- |- lib
+ |- /lib
     |- my_package.dart
- |- test
+ |- /test
     |- my_package.dart
  |- pubspec.yaml
+ |- pubspec.lock
  |- analysis_options.yaml
  |- .gitignore
  |- README.md
  |- CHANGELOG.md
+ |- /.dartool
 
 ```
-The default template **console-simple** omits the _test_ and _lib_ folders.
 
 ## RUNNING THE PACKAGE
 
@@ -57,14 +58,3 @@ You can also point dart to run a specific file:
 ```
 dart run ./name_of_a_file.dart 1 2 3
 ```
-
-### Running with vscode
-
-If the default file is selected, going to the **Run** menu or pressing the corresponding key will work. If a different file is selected, vscode will create a file called *launch.json* in which we can define two values to make it work properly.
-
-Under _configurations_ add:
-```
-"program": "path_to_file_to_run",
-"args": ["1", "2", "3"]
-```
-Now go to the **Run** menu or press the corresponding shortcut.

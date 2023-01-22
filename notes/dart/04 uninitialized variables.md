@@ -42,6 +42,7 @@ class A {
     // the late keywowrd allows to postpone the initialization
     late int b;
 
+    // here "a" is being initialized before the constructor
     A({required this.a}) {}  
 }
 ```
@@ -49,7 +50,7 @@ class A {
 ## Local
 ```dart
 void myFunction() {
-    // can be left unitialized but must be assigned before use
+    // must be initialized before use or throws an error
     int b;  
 }
 ```
