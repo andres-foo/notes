@@ -58,3 +58,26 @@ You can also point dart to run a specific file:
 ```
 dart run ./name_of_a_file.dart 1 2 3
 ```
+
+## RUNNING WITH VSCODE
+
+When going to the **Run and Debug** tab for vscode, at the top from the drop down menu one can choose to create a **launch.json** file that looks like this:
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "my_package",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
+```
+With this we'll be able to run our program with the shortcuts:
+* **CTRL+F5**: Run without debugging
+* **F5**: Start debugging
+
+
+For more configuration values check [https://dartcode.org/docs/launch-configuration/](https://dartcode.org/docs/launch-configuration/)

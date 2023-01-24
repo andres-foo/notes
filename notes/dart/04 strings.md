@@ -47,6 +47,27 @@ var s2 = """Multiple
 line
 string""";
 ```
+## RAW STRING
+```dart
+var str = r'First line\nSecond line';
+print(str); // First line\nSecond line
+```
 
 ## COMMON FUNCTIONS
+```dart
+var str = 'Test string';
 
+print(str.toUpperCase()); // TEST STRING
+print(str.toLowerCase()); // test string
+
+print(str.isEmpty); // false
+print(str.isNotEmpty); // true
+
+print(str.contains('string')); // true
+print(str.split(' ')); // ['Test', 'string']
+
+print(str.replaceAll('string', 'text')); // Test text
+print(str.replaceAll(RegExp(r't\s'), 'T ')); // TesT string
+
+print(str.substring(5, 8)); // str
+```
