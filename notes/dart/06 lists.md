@@ -10,26 +10,29 @@ var list1 = [1, 2, 3];
 // specifying the type int for its elements
 List<int> list2 = [1, 2, 3];
 
+// specifying this other way
+var list3 = <int>[];
+
 // allowing for multiple types
-List<dynamic> list3 = [1, 2.0, 'three'];
+List<dynamic> list4 = [1, 2.0, 'three'];
 
 // lists can have trailing commands
-var list4 = [
+var list5 = [
     'Soap',
     'Shampoo',
 ] ;
 
 // creates list of 3 items filled with 10's
-List<int> list5 = List.filled(3, 10);
-print(list5); // [10, 10, 10]
+List<int> list6 = List.filled(3, 10);
+print(list6); // [10, 10, 10]
 
 // creates empty list, similar to list = [];
-List<int> list6 = List.empty();
-print(list6); // []
+List<int> list7 = List.empty();
+print(list7); // []
 
 // creates a list of 3 items filled using the index
-List<int> list7 = List.generate(3, (i) => (i + 1) * 3);
-print(list7); // [3, 6, 9]
+List<int> list8 = List.generate(3, (i) => (i + 1) * 3);
+print(list8); // [3, 6, 9]
 
 ```
 
@@ -50,7 +53,17 @@ print(list3); // [0]
 
 ### Collection if
 ```dart
-var nav = ['Home', 'Furniture', 'Plants', if (loggedIn) 'Profile'];
+var loggedIn = true;
+
+// add one item
+var nav = ['Home', 'Furniture', if (loggedIn) 'Profile'];
+
+// add several items using the spread operator
+var nav = [
+	'Home',
+	'Furniture',
+	if (loggedIn) ...['Profile', 'Logout'],
+];
 ```
 
 ### Collection for
@@ -77,7 +90,7 @@ var list3 = list
   ..sort();
 print(list3); // [1, 2, 3, 4, 5, 6]
 
-// to apply map we must surrond the previous operations in ()
+// to apply map we must surround the previous operations in ()
 // also notice the toList() at the end since map returns an iterable
 list = [3, 1, 2];
 var list4 = (list
@@ -138,9 +151,8 @@ print(list.firstWhere((ele) => ele.isEven)); // 2
 ```
 
 ## LOOPING THROUGH ITEMS
-All of these achieve the same result, but two of them give the following warning: [https://dart-lang.github.io/linter/lints/avoid_function_literals_in_foreach_calls.html
-](https://dart-lang.github.io/linter/lints/avoid_function_literals_in_foreach_calls.html
-). Simply put, a `return` in the body of `for` returns from the body, while on `forEach`'s case
+All of these achieve the same result, but two of them give the following warning: [avoid_function_literals_in_foreach_calls](https://dart-lang.github.io/linter/lints/avoid_function_literals_in_foreach_calls.html
+). 
 ```dart
 var list = [1, 2, 3];
 
@@ -220,6 +232,3 @@ print(list.skip(2)); // 3
 res = list.where((ele) => ele.isOdd);
 print(res); // [1, 3]
 ```
-
-
-
