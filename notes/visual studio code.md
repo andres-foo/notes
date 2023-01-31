@@ -13,7 +13,8 @@ To call forth the command pallete press `CTRL + SHIFT + P`
 * **ALT + MOUSE1**: Create new cursor where the click is made
 
 ## MISC
-* **ALT + SHIFT + DOWN**: duplicate line
+* **ALT + SHIFT + UP/DOWN**: duplicate line
+* **CTRL + SHIFT + K**: delete line
 * **ALT + UP/DOWN**: move the line up/down swapping with other lines 
 
 ## RUNNING A FILE
