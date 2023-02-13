@@ -22,8 +22,8 @@ void main() {
 
   // CASE 3
   final List<int> c = const [1, 2, 3];
-  // the static analyzer doesn't know that because we assigned a constant
-  // value to a final variable, it can't be modified
+  // because we assigned a constant then it CAN'T be
+  // modified but the static analyzer doesn't know it
   c.add(4); // will thrown an error when compiling
 }
 ```
