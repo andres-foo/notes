@@ -7,7 +7,7 @@ Nullable variables can be left un-initialized for all scopes (top-level, static,
 ```dart
 int? a;
 
-print(a); // Null
+print(a); // null
 ```
 ## NON-NULLABLE VARIABLES
 For non-nullable it depends on the scope
