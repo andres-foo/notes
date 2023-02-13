@@ -35,11 +35,11 @@ When a local variable gets declared with **var** but left uninitialized, the sta
 
 ```dart
 void main() {
-    // local therefore null
-    // the static analyzer considers it a dynamic
-    var a;
+  // local therefore null
+  // the static analyzer considers it a dynamic
+  var a;
 
-    // prints Null
-    print(a.runtimeType);
+  print(a.runtimeType); // prints Null
+  print(a); // prints null
 }
 ```
