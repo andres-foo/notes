@@ -7,6 +7,7 @@ CREATE DATABASE my_app;
 
 ## CREATE TABLE
 ```sql
+-- asd
 CREATE TABLE [IF NOT EXISTS] status (
     status_id INT NOT NULL,
     description VARCHAR(30) NOT NULL,
@@ -25,41 +26,41 @@ CREATE TABLE [IF NOT EXISTS] users (
 
 ## BASIC CRUD
 ```sql
---- insert
+-- insert
 INSERT INTO users (username, email) 
 VALUES ('jsmith', 'jsmith@example.com');
 
---- read
+-- read
 SELECT username, email 
 FROM clients
 WHERE status_id = 1;
 
---- update
+-- update
 UPDATE users 
 SET email = 'jsmith2023@example.com', status_id = 2
 WHERE user_id = 1;
 
---- delete
+-- delete
 DELETE FROM users WHERE user_id = 10;
 ```
 ## DISTINCT
 
 ```sql
---- only select different country values
+-- only select different country values
 SELECT DISTINCT country FROM clients;
 
---- number of different countries in the clients table
+-- number of different countries in the clients table
 SELECT count(DISTINCT country) FROM clients;
 ```
 ## LIKE WILDCARDS
 
 ```sql
---- "_" means exactly one character
---- matches A-A34, A-223, etc
+-- "_" means exactly one character
+-- matches A-A34, A-223, etc
 SELECT * FROM products WHERE sku_code LIKE 'A-___';
 
---- "%" means zero or more characters
---- matches anything ending in .com
+-- "%" means zero or more characters
+-- matches anything ending in .com
 SELECT * FROM users WHERE email LIKE '%.com';
 ```
 
@@ -67,7 +68,10 @@ SELECT * FROM users WHERE email LIKE '%.com';
 
 ```sql
 /*
-Consider a table with all possible statuses for a user, among those statuses you have: "permanently banned" and "temporarily banned". The following nested query will get all users who are not banned.
+** Consider a table with all possible statuses for a user, among
+** those statuses you have: "permanently banned" and 
+** "temporarily banned". The following nested query will get all
+** users who are not banned.
 */ 
 SELECT * FROM users 
 WHERE users.status_id IN (
