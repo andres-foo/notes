@@ -151,12 +151,12 @@ CREATE TABLE posts (
 );
 
 -- or alter an existing table
-ALTER TABLE post
+ALTER TABLE posts
 ADD FULLTEXT(title, body);
 
 -- now do a query
 -- it will give priority to posts that contain both terms
-SELECT * FROM post WHERE
+SELECT * FROM posts WHERE
     MATCH (title, body)
     AGAINST('android phone');
 ```
