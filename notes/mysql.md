@@ -160,3 +160,47 @@ SELECT * FROM posts WHERE
     MATCH (title, body)
     AGAINST('android phone');
 ```
+
+## REMOVE DUPLICATES
+
+How to figure out duplicate entries that have the same value on the _kana_ column:
+
+```sql
+select kana, count(kana) FROM examples
+WHERE kanji == ""
+GROUP BY kana
+HAVING count(kana) > 1;
+```
+
+To remove said duplicates use:
+
+```sql
+DELETE FROM examples
+WHERE kanji == "" AND
+ROWID NOT IN (
+	SELECT MIN(ROWID)
+	FROM examples
+	GROUP BY kana
+);
+```
+
+If you only consider duplicates if two columns match do this instead:
+
+```sql
+SELECT kanji, kana, count(kanji) FROM examples
+WHERE kanji != ""
+GROUP BY kanji, kana
+HAVING count(kanji) > 1;
+```
+
+Now to delete all duplicate entries that share both _kanji_ and _kana_ columns.
+
+```sql
+DELETE FROM examples
+WHERE kanji != "" AND
+ROWID NOT IN (
+    SELECT MIN(ROWID)
+    FROM examples
+    GROUP BY kanji, kana
+);
+```

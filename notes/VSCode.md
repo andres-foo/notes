@@ -2,7 +2,7 @@
 
 ## COMMAND PALLETE
 
-To call forth the command pallete press `CTRL + SHIFT + P`
+To call forth the command palette press `CTRL + SHIFT + P`
 
 ### Common commands
 * Interactive editor playground
