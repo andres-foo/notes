@@ -1,22 +1,43 @@
 # VISUAL STUDIO CODE SHORTCUTS
 
-## COMMAND PALLETE
+To test some features you can run the _editor playground_ from `Help > Editor Playground`.
 
-To call forth the command palette press `CTRL + SHIFT + P`
+### COMMAND PALLETE
 
-### Common commands
-* Interactive editor playground
+To call forth the command palette press `CTRL + SHIFT + P`, here you can find things like:
+- Change color `theme`
+- `format` document
 
-## MULTI-CURSOS EDITING
+### COMMON COMMANDS
+- `CTRL + B` : Toggle side panel
+- `CTRL + J` : Toggle terminal
+- `CTRL + ,` : Open settings
+- `CTRL + }` : Toggle line comment
+- `SHIFT + ALT + A` : Toggle block comment
+- `CTRL + Space` : Invoke IntelliSense
+- `CTRL + P` : Go to file
+- `F2` : Refactor function/variable
 
-* **CTRL + ALT + UP/DOWN**: Create a new cursor above or below in the same column
-* **ALT + MOUSE1**: Create new cursor where the click is made
+### SELECTING TEXT
+- `SHIFT + LEFT/RIGHT` : Add/Remove characters to selection
+- `SHIFT + ALT + LEFT/RIGHT` : Add/Remove sections
+- `SHIFT +ALT + MOUSE1` : Box selection
 
-## MISC
-* **ALT + SHIFT + UP/DOWN**: duplicate line
-* **CTRL + SHIFT + K**: delete line
-* **ALT + UP/DOWN**: move the line up/down swapping with other lines 
+### MULTI-CURSOR EDITING
 
-## RUNNING A FILE
-* **F5** : start debugging
-* **CTRL + F5** : run without debugging
+- `CTRL + ALT + UP/DOWN`: Create a new cursor above or below in the same column
+- `ALT + MOUSE1` : Create new cursor where the click is made
+- `CTRL + SHIFT + L` : Create a cursor in all instances of a string
+
+### WORKING WITH LINES
+- `ALT + UP/DOWN` : Move a line up/down swapping it with other lines 
+- `ALT + SHIFT + UP/DOWN` : Duplicate a line up/down
+- `CTRL + SHIFT + K` : Delete line
+
+### RUNNING A FILE
+- `F5` : Start debugging
+- `CTRL + F5` : Run without debugging
+
+### FORMAT
+- `SHIFT + ALT + F` : Format the entire document
+- `CTRL + K` > `CTRL + F` : Format current selection
